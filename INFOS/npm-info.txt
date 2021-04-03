@@ -1,0 +1,18 @@
+npm i -g (package name) this will install it globally.
+
+npm i (package name) this will install it locally.
+
+npm list --> all dependencies
+npm list -depth=0 --> all local dependencies.
+
+npm outdated
+npm -g outdated
+
+to install a package for example that has to be used only for development and not production we can use:
+npm -i (package name) --save-dev
+
+to see dependencies:
+npm view (package name)
+npm view (package name) dependencies
+npm view (package name) versions
+

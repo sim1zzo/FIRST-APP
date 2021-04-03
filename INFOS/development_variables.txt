@@ -1,0 +1,19 @@
+We have seen so far
+
+
+process  -=> is an object that gives us access to the current process.
+
+ process.env.NODE_ENV // if not set we get undefined 
+
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`); if !set undefined
+console.log(`app ${app.get('env')}`); development by default
+
+
+if we want to change the environment variable to production we can:
+
+export NODE_ENV=production
+
+
+if we want to store passwords:
+
+export vidly_password=1234

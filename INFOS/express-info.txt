@@ -1,0 +1,7 @@
+To set up the environment variables we have to:
+
+const port = process.env.PORT || 3000;
+
+ON MAC TO SET AN ENVIRONMENT VARIABLE BY EXCECUTING:
+ON TERMINAL
+export PORT = 5000

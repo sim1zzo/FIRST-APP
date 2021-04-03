@@ -1,0 +1,40 @@
+we can use the debug package to log and display messages.
+
+with debug we will replace all the console.log and set a enviromental variable
+so we don't have to comment out or delete any code, instead it can be used when needed.
+
+
+const startupDebugger = require('debug')('app:startup');
+const dbDebugger = require('debug')('app:db');
+
+if (app.get('env') === 'development') {
+  app.use(morgan('tiny'));
+  startupDebugger('Morgan enabled (development)👨‍💻...');
+}
+
+dbDebugger('Connected to the database');
+
+
+export DEBUG:app:startup
+
+and then run the app:
+    ~/De/No/FIRST-APP/Part-6 Vidly  nodemon index.js                                       ✔ 
+[nodemon] 2.0.7
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node index.js`
+Applicartion Name: My Vidly App- Development
+Applicartion Name: dev-mail-server
+Mail Password: 1234
+  app:startup Morgan enabled (development)👨‍💻... +0ms
+Listening on 🚪 4000...
+
+
+IN CASE WE DONT NEED ANY DEBUG WE CAN 
+export DEBUG=""
+
+
+if we want to see all 
+
+export DEBUG=app:*  
